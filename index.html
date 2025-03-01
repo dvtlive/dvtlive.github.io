@@ -51,23 +51,27 @@
 
     <!-- Nội dung chính -->
     <main class="main">
-        <div class="container">
-            <h3 class="title title--h2 first-title title__separate">Dự Án GitHub</h3>
-            <table border="1" class="github-projects">
-                <thead>
-                    <tr>
-                        <th>Tên Dự Án</th>
-                        <th>Mô Tả</th>
-                        <th>Ngôn Ngữ</th>
-                        <th>Liên Kết</th>
-                    </tr>
-                </thead>
-                <tbody id="github-projects-body">
-                    <tr>
-                        <td colspan="4">Đang tải...</td>
-                    </tr>
-                </tbody>
-            </table>
+        <div class="container gutter-top">
+            <div class="box box-content">
+                <h3 class="title title--h2 first-title title__separate">Dự Án GitHub</h3>
+                <div class="table-container">
+                    <table class="github-table">
+                        <thead>
+                            <tr>
+                                <th>Tên Dự Án</th>
+                                <th>Mô Tả</th>
+                                <th>Ngôn Ngữ</th>
+                                <th>Liên Kết</th>
+                            </tr>
+                        </thead>
+                        <tbody id="github-projects-body">
+                            <tr>
+                                <td colspan="4">Đang tải...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
     </main>
 
@@ -75,6 +79,41 @@
     <footer class="footer">
         © 2025 Vận Hành Bởi Đặng Văn Trưởng
     </footer>
+
+    <!-- CSS -->
+    <style>
+        .table-container {
+            overflow-x: auto;
+            margin-top: 20px;
+        }
+        .github-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .github-table th, .github-table td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        .github-table th {
+            background: #ef9d64;
+            color: white;
+        }
+        .github-table tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+        .github-table a {
+            color: #ef9d64;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .github-table a:hover {
+            text-decoration: underline;
+        }
+    </style>
 
     <!-- JavaScript -->
     <script>
